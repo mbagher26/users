@@ -1,5 +1,6 @@
 import './App.css';
 import React, { Component } from 'react'
+import User from './user/User';
 
 export default class App extends Component {
   constructor(props) {
@@ -13,11 +14,15 @@ export default class App extends Component {
        ]
     }
   }
+
+  
   
   render() {
     return (
       <div>
-        
+          {this.state.users.map(user =>(
+            <User key={user.id} {...user} onRemove={this.removeHandler.bind(this)}/>
+          ))}
       </div>
     )
   }
