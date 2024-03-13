@@ -6,7 +6,11 @@ export default class App extends Component {
     super(props)
   
     this.state = {
-       
+       users:[
+        {id:1, name: 'Siavash'},
+        {id:2, name: 'Dariyoush'},
+        {id:3, name: 'moin'},
+       ]
     }
   }
   
