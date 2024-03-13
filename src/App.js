@@ -13,10 +13,22 @@ export default class App extends Component {
         {id:3, name: 'moin'},
        ]
     }
+    this.removeHandler = this.removeHandler.bind(this)
   }
 
   removeHandler(userId){
-    console.log(userId)
+
+    let newUser = [...this.state.users]
+
+    let mainUserIndex = newUser.findIndex((user) => {
+            
+      return user.id === userId 
+    })
+
+          newUser.splice(mainUserIndex, 1)
+    this.setState({
+      users: newUser
+    })
   }
   
   render() {
