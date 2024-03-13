@@ -15,13 +15,15 @@ export default class App extends Component {
     }
   }
 
-  
+  removeHandler(userId){
+    console.log(userId)
+  }
   
   render() {
     return (
       <div>
           {this.state.users.map(user =>(
-            <User key={user.id} {...user} onRemove={this.removeHandler.bind(this)}/>
+            <User key={user.id} {...user} onRemove={this.removeHandler}/>
           ))}
       </div>
     )
