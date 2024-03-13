@@ -8,11 +8,13 @@ export default class User extends Component {
              
         }
     }
+
+    
     
     render() {
         return (
             <div>
-                <h1>{this.props.name}</h1>
+                <h1>{this.props.name}</h1> <button onClick={this.removeMethod.bind(this, this.props.id)}></button>
             </div>
         )
     }
